@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eee9df">
+<meta name="description" content="『ことばの採集』—読むこと、意味を与えること、そして存在することを問い直す、国語教科書のかたちをした心理的ホラー。">
+<title>ことばの採集 — 読むことについて</title>
+<style>
+  :root{--paper:#eee9df;--paper2:#e4ded2;--ink:#24231f;--muted:#777269;--line:#c9c1b4;--red:#9a4237;--serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;--sans:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.9;letter-spacing:.035em} a{color:inherit;text-decoration:none} button{font:inherit;color:inherit;cursor:pointer} ::selection{background:var(--red);color:var(--paper)}
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E");mix-blend-mode:multiply}
+  header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid var(--line);font-family:var(--sans);font-size:11px;letter-spacing:.14em;position:relative;z-index:6}
+  .brand{font-family:var(--serif);font-size:16px;letter-spacing:.18em}.nav{display:flex;gap:clamp(14px,3vw,38px)}.nav a{color:var(--muted);transition:color .25s}.nav a:hover{color:var(--red)}
+  .hero{min-height:calc(100svh - 76px);display:grid;grid-template-columns:1fr minmax(280px, .78fr);align-items:center;padding:9vh 12vw 11vh;gap:8vw;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;width:42vw;height:42vw;border:1px solid var(--line);border-radius:50%;right:-12vw;top:9%;opacity:.55}.hero:after{content:"";position:absolute;width:26vw;height:26vw;border:1px solid var(--line);border-radius:50%;right:-4vw;top:21%;opacity:.4}
+  .eyebrow{font:10px var(--sans);letter-spacing:.25em;color:var(--red);text-transform:uppercase}.hero h1{font-size:clamp(48px,7.2vw,100px);font-weight:400;line-height:1.38;letter-spacing:.13em;margin:26px 0 30px;position:relative;z-index:1}.hero h1 span{display:block;font-size:.32em;letter-spacing:.25em;color:var(--muted);margin-top:14px}.lead{font-size:clamp(14px,1.3vw,17px);max-width:28em;line-height:2.35}.hero-links{display:flex;align-items:center;gap:25px;margin-top:38px;font:11px var(--sans);letter-spacing:.1em}.primary{padding:12px 18px;border:1px solid var(--ink);transition:background .25s,color .25s}.primary:hover{background:var(--ink);color:var(--paper)}.plain-link{border-bottom:1px solid var(--line);padding:10px 0;color:var(--muted)}
+  .book-stage{display:flex;justify-content:center;position:relative;z-index:1}.book{width:min(300px,65vw);aspect-ratio:.69;background:#d9d0c1;border:1px solid #b9b0a2;box-shadow:18px 20px 0 rgba(46,41,33,.08),2px 3px 12px rgba(46,41,33,.12);padding:25px 24px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(2deg);transition:transform .6s}.book:hover{transform:rotate(0deg) translateY(-5px)}.book-top{font:9px var(--sans);letter-spacing:.2em;display:flex;justify-content:space-between;color:#6b655c}.book-title{font-size:clamp(28px,3vw,40px);font-weight:400;line-height:1.65;letter-spacing:.18em;text-align:center;margin:auto 0}.book-title small{display:block;font:10px var(--sans);letter-spacing:.22em;margin-top:15px;color:#6b655c}.book-mark{height:1px;background:#aaa091;width:100%;position:relative}.book-mark:after{content:"";position:absolute;width:7px;height:7px;border:1px solid #8d8170;border-radius:50%;left:50%;top:-3px;background:#d9d0c1}.book-bottom{font:9px var(--sans);letter-spacing:.18em;display:flex;justify-content:space-between;color:#6b655c}
+  .margin-note{position:absolute;font:10px var(--sans);letter-spacing:.15em;color:var(--muted);writing-mode:vertical-rl}.note-a{left:4vw;bottom:12vh}.note-b{right:4vw;top:17vh}
+  section{padding:120px 12vw;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:100px 1fr;gap:5vw;margin-bottom:58px}.section-no{font:11px var(--sans);letter-spacing:.15em;color:var(--red);padding-top:13px}.section-head h2{font-size:clamp(29px,4vw,48px);font-weight:400;line-height:1.6;letter-spacing:.08em;margin:0}.section-head p{max-width:620px;color:#625e56;font-size:14px;margin:20px 0 0;line-height:2.3}
+  .statement{max-width:800px;margin:0 auto;text-align:center;padding:35px 0 15px}.statement .big{font-size:clamp(22px,3.1vw,38px);line-height:2.1;letter-spacing:.1em}.statement .small{font:10px var(--sans);letter-spacing:.2em;color:var(--muted);margin-top:35px}
+  .columns{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tile{border-top:1px solid var(--ink);padding:22px 5px 15px}.tile .num{font:10px var(--sans);letter-spacing:.16em;color:var(--red)}.tile h3{font-size:20px;font-weight:400;letter-spacing:.1em;margin:15px 0}.tile p{font-size:13px;line-height:2.2;color:#6b665e;margin:0}
+  .contents{border-top:1px solid var(--line)}.content-row{display:grid;grid-template-columns:70px 1fr 1.1fr;gap:25px;align-items:start;padding:25px 0;border-bottom:1px solid var(--line)}.content-row .n{font:11px var(--sans);color:var(--red);padding-top:5px}.content-row h3{font-weight:400;font-size:18px;margin:0;letter-spacing:.1em}.content-row p{font-size:13px;color:var(--muted);margin:0;line-height:2.1}
+  .question-section{background:var(--ink);color:var(--paper);padding:110px 12vw}.question-section .eyebrow{color:#c77a6e}.question-section h2{font-size:clamp(28px,4.2vw,52px);font-weight:400;line-height:1.9;letter-spacing:.1em;margin:28px 0 36px}.question-section p{font-size:14px;color:#c3bdb2;max-width:600px;line-height:2.4}.reveal-wrap{margin-top:42px;border-top:1px solid #555148;border-bottom:1px solid #555148}.reveal-btn{background:none;border:0;width:100%;display:flex;justify-content:space-between;text-align:left;padding:20px 0;font:11px var(--sans);letter-spacing:.15em;color:#e5ded2}.reveal-btn span:last-child{color:#c77a6e;font-size:17px}.reveal{display:none;padding:0 0 24px;color:#c3bdb2;font-size:13px;line-height:2.3;max-width:620px}.reveal.open{display:block}
+  .closing{padding:110px 12vw 100px;text-align:center}.closing h2{font-size:clamp(28px,4vw,45px);font-weight:400;letter-spacing:.15em;line-height:1.8}.closing p{font-size:13px;color:var(--muted);line-height:2.4}.back-top{display:inline-block;margin-top:35px;font:10px var(--sans);letter-spacing:.2em;border-bottom:1px solid var(--line);padding-bottom:8px}
+  footer{border-top:1px solid var(--line);padding:25px 6vw;display:flex;justify-content:space-between;gap:20px;font:9px var(--sans);letter-spacing:.13em;color:var(--muted)}
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}.fade.visible{opacity:1;transform:translateY(0)}
+  @media(max-width:760px){header{height:64px;padding:0 5vw}.nav{gap:12px}.nav a{font-size:9px}.brand{font-size:13px}.hero{min-height:auto;grid-template-columns:1fr;padding:75px 9vw 95px;gap:45px}.hero h1{font-size:clamp(45px,13vw,74px);margin:20px 0}.book{width:210px}.hero:before{width:70vw;height:70vw;right:-30vw;top:42%}.hero:after{width:45vw;height:45vw;right:-15vw;top:51%}.margin-note{display:none}section{padding:78px 8vw}.section-head{grid-template-columns:40px 1fr;gap:15px;margin-bottom:40px}.section-head h2{font-size:29px}.columns{grid-template-columns:1fr;gap:25px}.content-row{grid-template-columns:35px 1fr;gap:12px}.content-row p{grid-column:2}.question-section{padding:80px 8vw}.closing{padding:80px 8vw}footer{padding:22px 5vw;flex-direction:column;gap:8px}.hero-links{gap:18px;flex-wrap:wrap}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header id="top">
+  <a class="brand" href="#top">ことばの採集</a>
+  <nav class="nav" aria-label="ページ内ナビゲーション">
+    <a href="#about">作品について</a><a href="#structure">本の構造</a><a href="#question">問い</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" style="border-top:0">
+    <div class="margin-note note-a">読むことは、採集すること。</div><div class="margin-note note-b">記載のないものについて。</div>
+    <div class="hero-copy fade">
+      <div class="eyebrow">A BOOK ABOUT READING</div>
+      <h1>ことばの<br>採集<span>読むことについての、ひとつの教材</span></h1>
+      <p class="lead">これは、どこにでもある国語の本。<br>文章を読み、問いに答え、意味を考える。<br>ただ、それだけのはずだった。</p>
+      <div class="hero-links"><a class="primary" href="#about">ページをひらく　↘</a><a class="plain-link" href="#question">ひとつの問いへ</a></div>
+    </div>
+    <div class="book-stage fade" aria-label="本の表紙イメージ"><div class="book"><div class="book-top"><span>国語　／　読解資料</span><span>01</span></div><div class="book-title">ことばの<br>採集<small>ここに書かれたものを読む</small></div><div class="book-mark"></div><div class="book-bottom"><span>読む・考える・記録する</span><span>第一冊</span></div></div></div>
+  </section>
+  <section id="about">
+    <div class="section-head fade"><div class="section-no">01 / ABOUT</div><div><h2>読み進めるほど、<br>「読む」という行為が揺らいでいく。</h2><p>『ことばの採集』は、国語教科書のかたちを借りた心理的ホラー作品です。詩、物語、説明文、古典風の文章、漢字の学習、資料と問い。それぞれは独立した教材のように見えながら、少しずつ、最初の詩の見え方を変えていきます。</p></div></div>
+    <div class="statement fade"><div class="big">あなたが理解したものは、<br>本当にそこに書かれていたものですか。</div><div class="small">— 読む前には、まだ答えられない問い。</div></div>
+  </section>
+  <section id="structure">
+    <div class="section-head fade"><div class="section-no">02 / STRUCTURE</div><div><h2>一冊の中に、<br>いくつもの読み方がある。</h2><p>特別な事件が起きるわけではありません。違和感は、いつもの学習のすき間に置かれています。</p></div></div>
+    <div class="columns fade">
+      <article class="tile"><div class="num">TEXT 01</div><h3>詩を読む</h3><p>最初に置かれた短い詩。意味はつかめない。それでも、答えに必要なものは、すでにここにある。</p></article>
+      <article class="tile"><div class="num">TEXT 02—</div><h3>別の文章を読む</h3><p>物語や説明文、古典風の文章。それぞれの文章が、同じ言葉に違う輪郭を与えていく。</p></article>
+      <article class="tile"><div class="num">TEXT LAST</div><h3>もう一度、読む</h3><p>最後に促されるのは、解説を読むことではなく、最初の詩へ戻ること。読み終えたとき、最初のページは同じままだろうか。</p></article>
+    </div>
+    <div class="contents fade" style="margin-top:65px">
+      <div class="content-row"><div class="n">01</div><h3>詩</h3><p>言葉の少なさが、読む人の解釈を呼び込む。</p></div>
+      <div class="content-row"><div class="n">02</div><h3>物語</h3><p>何気ない出来事の中に、説明しきれない小さなずれが残る。</p></div>
+      <div class="content-row"><div class="n">03</div><h3>説明文</h3><p>名前をつけること、分類すること、理解したと思うこと。</p></div>
+      <div class="content-row"><div class="n">04</div><h3>古典・漢字</h3><p>時代や表記が変わると、意味はどこまで保たれるのか。</p></div>
+      <div class="content-row"><div class="n">05</div><h3>資料・設問</h3><p>記録された事実と、そこから読み取ったことを分けて考える。</p></div>
+    </div>
+  </section>
+  <section class="question-section" id="question">
+    <div class="eyebrow fade">03 / THE QUESTION</div>
+    <h2 class="fade">もし、あなたが意味を与えなければ、<br>それは存在しなかったことになるのでしょうか。</h2>
+    <p class="fade">この本が確かめようとするのは、文章の中に隠された答えだけではありません。書かれていることと、読み取ったこと。その境目は、いつもはっきりしているのでしょうか。</p>
+    <div class="reveal-wrap fade"><button class="reveal-btn" id="revealBtn" aria-expanded="false" aria-controls="revealText"><span>読了後のためのメモ</span><span id="revealIcon">＋</span></button><div class="reveal" id="revealText">この欄は、答えを説明するためのものではありません。読み終えたあと、最初の詩に戻ってください。初めて読んだときには見えなかったものが、今は見えるかもしれません。あるいは、見えるようになったと思っているだけかもしれません。</div></div>
+  </section>
+  <section class="closing">
+    <div class="eyebrow fade">BEFORE YOU TURN THE PAGE</div>
+    <h2 class="fade">書かれていること。<br>書かれていないこと。<br>あなたが読んだこと。</h2>
+    <p class="fade">その三つは、同じでしょうか。</p>
+    <a href="#top" class="back-top">最初のページへ戻る　↑</a>
+  </section>
+</main>
+<footer><span>ことばの採集 — 読むことについて</span><span>作品紹介サイト ／ 制作中の構想</span></footer>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+  }, {threshold: .12});
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+  const btn = document.getElementById('revealBtn');
+  const panel = document.getElementById('revealText');
+  const icon = document.getElementById('revealIcon');
+  btn.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    icon.textContent = open ? '−' : '＋';
+  });
+</script>
+</body>
+</html>
